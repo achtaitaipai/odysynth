@@ -1,0 +1,40 @@
+body {
+  background-color: var(--clr-surface);
+  color: var(--clr-text);
+  font-family: var(--font-base);
+  font-size: var(--fs-0);
+  line-height: 1.3;
+  padding-block: 1rem 4rem;
+}
+
+body > * {
+  max-inline-size: clamp(20rem, 90vw, 75ch);
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ul,
+ol,
+dl,
+pre,
+address,
+table,
+details,
+fieldset,
+input[type="submit"],
+button {
+  margin-block-start: 1em;
+}
+
+:focus-visible{
+  outline: 2px solid var(--clr-active);
+  outline-offset: 5px;
+  transition: outline-offset .15s;
+}

@@ -1,0 +1,18 @@
+select{
+    position: relative;
+    appearance: none;
+    background-color: var(--clr-surface);
+    outline: 0;
+    width: 100%;
+    border: 1px solid currentColor;
+    padding: .8rem 1rem;
+    cursor: pointer;
+    background-image: var(--icon-chevron);
+    background-position: center right .75rem;
+    background-size: 1rem auto;
+    background-repeat: no-repeat;
+}
+
+* + select {
+  margin-block-start: 0.5rem;
+}

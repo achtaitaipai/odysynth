@@ -1,0 +1,74 @@
+fieldset {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  margin-block-start:2em;
+}
+
+legend {
+  font-weight: 600;
+  font-size: var(--fs-1);
+  margin-block:1em;
+}
+
+
+* + input,
+* + textarea {
+  margin-block-start: 0.5rem;
+}
+
+input:not([type="radio"],[type="checkbox"],[type="range"]),
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid currentColor;
+}
+
+textarea {
+    resize: vertical;
+}
+
+::placeholder {
+  color: var(--clr-text-shade);
+}
+
+
+input[type="file"] {
+  max-inline-size: 100%;
+  padding: 0;
+  cursor: initial;
+  align-self: flex-start;
+  color: var(--clr-text-shade);
+  background-color: var(--clr-surface-2);
+}
+
+input[type="file"]::-webkit-file-upload-button,
+input[type="file"]::file-selector-button {
+  margin-inline-end: .5rem;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  background: var(--clr-surface);
+  border: 0;
+  border-inline-end: 1px solid var(--clr-text);
+  border-radius: 0;
+}
+
+
+input[aria-invalid="true"], select[aria-invalid="true"] {
+  border-color: var(--clr-danger);
+}
+
+[aria-invalid="true"] + small {
+  color: var(--clr-danger);
+}
+
+:disabled,
+:disabled + small,
+label:has(+ :disabled) {
+  color: var(--clr-text-shade);
+}
+
+:disabled {
+  cursor: auto;
+  background: var(--clr-surface-2);
+}

@@ -1,0 +1,49 @@
+details {
+    display: block;
+    border: 1px solid var(--clr-text-shade);
+  }
+  
+  details + details {
+    margin-block-start: 0;
+    border-block-start: none;
+  }
+  details > * {
+    padding: 0 0.8rem 0.8rem 0.8rem;
+  }
+  details summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: var(--step-1);
+    padding: 0.8rem;
+  }
+  
+  details summary + * {
+    margin-block-start: 0;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+    content: none;
+  }
+  
+  details summary::marker {
+    display: none;
+    content: none;
+  }
+  
+  details summary::after {
+    content: "";
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    float: right;
+    transform: rotate(-90deg);
+    background-image: var(--icon-chevron);
+    background-position: right center;
+    background-size: 1.2rem auto;
+    background-repeat: no-repeat;
+  }
+  
+  details[open] > summary:after {
+    transform: rotate(0);
+  }

@@ -1,0 +1,10 @@
+input[type="submit"],
+button {
+  border: 1px solid currentColor;
+  background-color: var(--clr-surface);
+  cursor: pointer;
+  font-size: var(--fs-1);
+  width: unset;
+  padding: .7rem 1rem;
+  display: inline-block;
+}

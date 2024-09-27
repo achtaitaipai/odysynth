@@ -1,0 +1,31 @@
+blockquote {
+  text-wrap: balance;
+  padding: 0;
+  margin-inline: 0;
+  padding-inline: 1rem;
+  font-style: italic;
+}
+
+blockquote p:first-of-type::before {
+  content: open-quote;
+  font-size: var(--fs-1);
+}
+
+blockquote p:last-of-type::after {
+  content: close-quote;
+  font-size: var(--fs-1);
+}
+
+blockquote > * + * {
+  margin-block-start: 1em;
+}
+
+blockquote > cite {
+  font-weight: 500;
+  display: block;
+  text-indent: 1rem;
+}
+
+blockquote > cite:last-child::before {
+  content: "— ";
+}

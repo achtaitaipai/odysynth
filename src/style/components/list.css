@@ -1,0 +1,28 @@
+ul,
+ol {
+  padding-inline-start: 1.5rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+ol li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+  font-weight: var(--font-weight-medium);
+}
+
+li > :where(ul, ol) {
+  margin-block-start: 0;
+}
+
+:where(ul, ol) > li {
+  padding-inline-start: 0rem;
+  margin-block: 0.8rem;
+}
